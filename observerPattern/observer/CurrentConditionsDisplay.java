@@ -1,6 +1,6 @@
 package observer;
 
-public class CurrentConditionsDisplay implements IObserver {
+public class CurrentConditionsDisplay implements IObserver, IDisplayElement {
     private float temperature;
     private float humidity;
     private float pressure;
@@ -8,7 +8,7 @@ public class CurrentConditionsDisplay implements IObserver {
 
     public CurrentConditionsDisplay(ISubject weatherData) {
         this.weatherData = weatherData;
-        this.weatherData.registerObserver(this);
+        weatherData.registerObserver(this);
     }
 
     public void update(float temperature, float humidity, float pressure) {
