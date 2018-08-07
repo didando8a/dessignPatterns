@@ -1,16 +1,18 @@
 package observer;
 
+import java.util.ArrayList;
+
 public class WheaterData implements ISubject {
-  private ArrayList<Observer> observers;
+  private ArrayList<IObserver> observers;
   private float temperature;
   private float humidity;
   private float pressure;
 
-  public void registerObserver(Observer observer) {
+  public void registerObserver(IObserver observer) {
     observers.add(observer);
   }
 
-  public void removeObserver(Observer observer) {
+  public void removeObserver(IObserver observer) {
     int i = observers.indexOf(observer);
 
     if (i > 0) {
@@ -19,7 +21,7 @@ public class WheaterData implements ISubject {
   }
 
   public void notifyObservers() {
-    for (Observer observer : observers) {
+    for (IObserver observer : observers) {
       observer.update(temperature, humidity, pressure);
     }
   }

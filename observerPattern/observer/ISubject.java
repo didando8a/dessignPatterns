@@ -1,7 +1,7 @@
 package observer;
 
 public interface ISubject {
-  public void registerObserver(Observer observer);
-  public void removeObserver(Observer observer);
+  public void registerObserver(IObserver observer);
+  public void removeObserver(IObserver observer);
   public void notifyObservers();
 }
