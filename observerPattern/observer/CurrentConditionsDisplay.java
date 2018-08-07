@@ -8,7 +8,7 @@ public class CurrentConditionsDisplay implements IObserver {
 
     public CurrentConditionsDisplay(ISubject weatherData) {
         this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+        this.weatherData.registerObserver(this);
     }
 
     public void update(float temperature, float humidity, float pressure) {
