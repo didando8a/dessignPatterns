@@ -8,6 +8,10 @@ public class WeatherData implements ISubject {
   private float humidity;
   private float pressure;
 
+  public WeatherData() {
+    this.observers = new ArrayList<IObserver>();
+  }
+
   public void registerObserver(IObserver observer) {
     observers.add(observer);
   }
