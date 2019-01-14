@@ -1,6 +1,7 @@
-import iterator.*;
+import iterator.MenuItem;
+import java.util.ArrayList;
 
-public class iteratorPattern/PancakeHouseMenu {
+public class PancakeHouseMenu {
     private ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -9,7 +10,7 @@ public class iteratorPattern/PancakeHouseMenu {
         addItem(
             "K&B's Pankade Breakfast",
             "Pancakes with scrambled eggs, and toast",
-            true;
+            true,
             2.99
         );
 
