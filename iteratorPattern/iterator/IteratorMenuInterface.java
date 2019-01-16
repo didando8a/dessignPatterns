@@ -1,6 +1,6 @@
 package iterator;
 
-public interface Iterator {
+public interface IteratorMenuInterface {
     boolean hasNext();
 
     Object next();

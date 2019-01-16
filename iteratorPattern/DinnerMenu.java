@@ -1,4 +1,5 @@
-import iterator.*;
+import iterator.MenuItem;
+import iterator.IteratorMenuInterface;
 
 public class DinnerMenu {
     static final int MAX_ITEMS = 6;
@@ -53,8 +54,7 @@ public class DinnerMenu {
         }
     }
 
-    public MenuItem[] getMenuItem() {
-        return menuItems;
-        
+    public Iterator createIterator() {
+        return new DinnerMenu(menuItems);
     }
 }

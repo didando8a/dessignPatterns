@@ -1,4 +1,6 @@
 import iterator.MenuItem;
+import iterator.IteratorMenuInterface;
+import iterator.PancakeMenuIterator;
 import java.util.ArrayList;
 
 public class PancakeHouseMenu {
@@ -34,10 +36,14 @@ public class PancakeHouseMenu {
             true,
             3.59
         );
+    }
 
-        public void addItem(String name, String description, boolean vegetarian, double price) {
-            MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
-            menuItems.add(menuItem);
-        }
+    public void addItem(String name, String description, boolean vegetarian, double price) {
+        MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
+        menuItems.add(menuItem);
+    }
+
+    public IteratorMenuInterface createIterator() {
+        return new PancakeMenuIterator(menuItems);
     }
 }

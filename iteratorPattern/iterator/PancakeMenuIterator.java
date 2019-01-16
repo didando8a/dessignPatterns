@@ -3,7 +3,7 @@ package iterator;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class PancakeMenuIterator implements Iterator {
+public class PancakeMenuIterator implements IteratorMenuInterface {
     ArrayList<MenuItem> items;
     Iterator<MenuItem> iterator;
 

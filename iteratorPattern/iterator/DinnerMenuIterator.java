@@ -1,6 +1,6 @@
 package iterator;
 
-public class DinnerMenuIterator implements Iterator {
+public class DinnerMenuIterator implements IteratorMenuInterface {
     MenuItem[] items;
     int position = 0;
 
